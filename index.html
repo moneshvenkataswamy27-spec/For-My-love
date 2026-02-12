@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>For Anusuya ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background: linear-gradient(#ffe6ec, #fff);
+      text-align: center;
+      padding: 30px;
+    }
+    .box {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      max-width: 480px;
+      margin: auto;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #b30047;
+    }
+    p {
+      font-size: 18px;
+      color: #444;
+    }
+    button {
+      background: #ff4d6d;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+    .photos img {
+      width: 100%;
+      border-radius: 12px;
+      margin-top: 15px;
+    }
+    #q1, #q2, #photos, #letter {
+      display: none;
+    }
+    #letter {
+      margin-top: 25px;
+      color: #80002a;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <h2>Happy Valentine’s Day Anusuya ❤️</h2>
+
+    <p>Do you know that every beautiful memory in my life has you somewhere in it?</p>
+    <button onclick="next('q1')">Yes ❤️</button>
+
+    <div id="q1">
+      <p>When life feels heavy, do you feel my love holding you even when I’m silent?</p>
+      <button onclick="next('q2')">Yes ❤️</button>
+    </div>
+
+    <div id="q2">
+      <p>Will you choose me again and again, in every lifetime, just like I choose you?</p>
+      <button onclick="next('photos')">Forever ❤️</button>
+    </div>
+
+    <div id="photos" class="photos">
+      <h3>Our Memories 📸</h3>
+
+      <!-- ADD YOUR PHOTOS BELOW -->
+      <img src="photo1.jpg" alt="Memory 1">
+      <img src="photo2.jpg" alt="Memory 2">
+      <img src="photo3.jpg" alt="Memory 3">
+
+      <button onclick="showLetter()">Open My Heart 💌</button>
+    </div>
+
+    <div id="letter">
+      <h3>My Love Letter 💌</h3>
+      <p>
+        My Dearest Anusuya ❤️<br><br>
+        From the moment you came into my life, everything changed for the better.
+        Your smile gives me strength, your voice gives me peace, and your love gives my life meaning.<br><br>
+        Every heartbeat of mine whispers your name.
+        You are my best friend, my home, and my forever.<br><br>
+        I promise to walk beside you, love you deeply, and choose you every single day.<br><br>
+        Happy Valentine’s Day, my love ❤️
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function next(id) {
+      document.querySelectorAll('#q1, #q2, #photos').forEach(el => el.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+    function showLetter() {
+      document.getElementById('photos').style.display = 'none';
+      document.getElementById('letter').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
